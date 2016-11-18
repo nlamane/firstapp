@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<div class="container">
+    <div class="row">
+    <%= link_to 'New Post', new_post_path %>
+    </div>
+</div>
+<div class="container">
+
+    <div class="row">
+    <% @posts.each do |post| %>
+      <div class="col-md-4">
+        <h2><%= post.title %></h2>
+        <p><%= post.synopsis %></p>
+        <p><%= post.director %></p>
+        <p><%= post.image %></p>
+        <p>><%= link_to 'Show', post %></p>
+        <p><%= link_to 'Edit', edit_post_path(post) %></p>
+        <p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+    <% end %>
+    </div>
+</div>
+
+    
+  </tbody>
+
+<br>
+
