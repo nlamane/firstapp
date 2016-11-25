@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>Movie appreciation</h1>
 
 <div class="container">
     <div class="row">
@@ -13,9 +13,9 @@
     <% @posts.each do |post| %>
       <div class="col-md-4">
         <h2><%= post.title %></h2>
-        <p><%= post.synopsis %></p>
-        <p><%= post.director %></p>
-        <p><%= post.image %></p>
+        <p><%= image_tag(post.image, class: 'img-responsive') %></p>
+        <p><strong><%= post.director %></strong></p>
+        <p style="text-align: justify;"><%= post.synopsis %></p>
         <p>><%= link_to 'Show', post %></p>
         <p><%= link_to 'Edit', edit_post_path(post) %></p>
         <p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
@@ -24,8 +24,6 @@
     </div>
 </div>
 
-    
-  </tbody>
 
 <br>
 
