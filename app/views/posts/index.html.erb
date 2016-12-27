@@ -23,9 +23,9 @@
         <p><%= image_tag(post.image, class: 'img-responsive') %></p>
         <p><strong><%= post.director %></strong></p>
         <p style="text-align: justify;"><%= post.synopsis %></p>
-        <p><%= link_to 'Show', post, class: "btn btn-default" %></p>
-        <p><%= link_to 'Edit', edit_post_path(post), class: "btn btn-default" %></p>
-        <p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></p>
+        <p><%= link_to 'Show', post, class: "btn btn-default" %>
+        <%= link_to 'Edit', edit_post_path(post), class: "btn btn-default" %>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></p>
       </div>
     <% end %>
     </div>
