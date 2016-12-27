@@ -2,22 +2,28 @@
 
 <p>
   <strong>Title:</strong>
+  <br>
   <%= @post.title %>
 </p>
 
 <p>
+  <strong>Director:</strong>
+  <br>
+  <%= @post.director %>
+</p>
+
+<p>
   <strong>Synopsis:</strong>
+  <br>
   <%= @post.synopsis %>
 </p>
 
 <p>
-  <strong>Director:</strong>
-  <%= @post.director %>
-</p>
-<p>
   <strong>Image:</strong>
+  <br>
   <%= @post.image %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_post_path(@post), class: "btn btn-default" %> 
+
+<%= link_to 'Back', posts_path, class: "btn btn-default" %>

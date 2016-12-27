@@ -1,24 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Movie appreciation</h1>
-
+<br>
+<br>
 <div class="container">
     <div class="row">
-    <%= link_to 'New Post', new_post_path %>
+        <div id=btn1>
+            <div class="col-md-12 text-center" >
+                <%= link_to 'Ajouter un film', new_post_path, class: "btn btn-default"%>
+            </div>
+        </div>    
     </div>
 </div>
 <div class="container">
 
     <div class="row">
+    <br>
+    <br>
     <% @posts.each do |post| %>
       <div class="col-md-4">
         <h2><%= post.title %></h2>
         <p><%= image_tag(post.image, class: 'img-responsive') %></p>
         <p><strong><%= post.director %></strong></p>
         <p style="text-align: justify;"><%= post.synopsis %></p>
-        <p>><%= link_to 'Show', post %></p>
-        <p><%= link_to 'Edit', edit_post_path(post) %></p>
-        <p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to 'Show', post, class: "btn btn-default" %></p>
+        <p><%= link_to 'Edit', edit_post_path(post), class: "btn btn-default" %></p>
+        <p><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></p>
       </div>
     <% end %>
     </div>
